@@ -1,32 +1,14 @@
-# Table of Contents
-* Theory of Operator Splitting
-* Implimentation of OrdinaryDiffEqOperatorSplitting.jl
-* Examples/demo
+# Where Operator Splitting hides in Real World Applications
 
-## Motivation
+## Reaction Diffusion Systems
 
-* Suppose we want to solve
+## Turing Patterns
 
-$$
-\frac{du}{dt} = f(u, t) + g(u, t) \\
-$$
+## Cardiac Electrophysiology
 
-![`f+g` can be much more complicated than `f` and `g` individually](additive-split-of-fields.svg)
+## Cardiac Mechanics coupled with Blood Flow
 
-## How to solve splitting
-![Lie derivatives](lie-derivative.svg)
-
-## Defining and solving an ODE
-
-Let's solve the Lorenz equations
-
-$$
-\begin{aligned}
-\frac{dx}{dt} &= σ(y-x) \\
-\frac{dy}{dt} &= x(ρ-z) - y \\
-\frac{dz}{dt} &= xy - βz \\
-\end{aligned}
-$$
+## Cardiac Electromechanics
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->

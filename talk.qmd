@@ -1,11 +1,11 @@
 ---
-title: "Operator Splitting solvers for OrdinaryDiffEQ"
+title: "Operator Splitting solvers for OrdinaryDiffEq"
 subtitle: "Solving PDEs faster by over-specializing"
 author:
   - name: "Oscar Smith"
     affiliation: "JuliaHub"
-  - name: "Denis Ogiermann"
-    affiliation: "Somewhere"
+  - name: "Dennis Ogiermann"
+    affiliation: "Chair of Continuum Mechanics<br>Ruhr-University, Bochum, Germany"
 format:
   revealjs:
     smaller: true
@@ -24,6 +24,7 @@ format:
 date: 2026-08-13
 engine: julia
 ---
+<!-- The submitted title was accelerating PDE timestepping with OrdinaryDiffEqOperatorSplitting, should we stick? -->
 
 {{< include Theory.qmd >}}
 {{< include Package.qmd >}}

@@ -1,0 +1,7 @@
+# OrdinaryDiffEqOperatorSplitting.jl
+
+Package details go here.
+
+<!-- Local Variables: -->
+<!-- mode: markdown -->
+<!-- End: -->
