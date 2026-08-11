@@ -1,0 +1,27 @@
+# Table of Contents
+* Theory of Operator Splitting
+* Implimentation of OrdinaryDiffEqOperatorSplitting.jl
+* Examples/demo
+
+## Motivation
+
+* Suppose we want to solve
+
+$$
+\frac{du}{dt} = f(u, t) + g(u, t) \\
+$$
+
+![`f+g` can be much more complicated than `f` and `g` individually](additive-split-of-fields.svg)
+
+## Truncation errors
+
+* The fundamental difficulty of Operator Splitting is truncation error
+* Obvious methods have O(dt) error: Limited to Order 1
+* To get high order solvers you need to build multistage meta-integrators.
+
+## How to solve splitting
+![Lie derivatives](lie-derivative.svg)
+
+<!-- Local Variables: -->
+<!-- mode: markdown -->
+<!-- End: -->

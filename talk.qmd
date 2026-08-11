@@ -1,0 +1,35 @@
+---
+title: "Operator Splitting solvers for OrdinaryDiffEQ"
+subtitle: "Solving PDEs faster by over-specializing"
+author:
+  - name: "Oscar Smith"
+    affiliation: "JuliaHub"
+  - name: "Denis Ogiermann"
+    affiliation: "Somewhere"
+format:
+  revealjs:
+    smaller: true
+    code-copy: true
+    code-line-numbers: false
+    hash-type: number
+    history: false
+    link-external-icon: true
+    menu:
+      hideMissingTitles: true
+      useTextContentForMissingTitles: false
+    preview-links: true
+    slide-number: true
+    theme: [moon, custom.scss]
+    transition: fade
+date: 2026-08-13
+engine: julia
+---
+
+{{< include Theory.qmd >}}
+{{< include Package.qmd >}}
+{{< include Demo.qmd >}}
+
+<!-- Local Variables: -->
+<!-- mode: markdown -->
+<!-- End: -->
+

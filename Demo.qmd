@@ -1,0 +1,33 @@
+# Table of Contents
+* Theory of Operator Splitting
+* Implimentation of OrdinaryDiffEqOperatorSplitting.jl
+* Examples/demo
+
+## Motivation
+
+* Suppose we want to solve
+
+$$
+\frac{du}{dt} = f(u, t) + g(u, t) \\
+$$
+
+![`f+g` can be much more complicated than `f` and `g` individually](additive-split-of-fields.svg)
+
+## How to solve splitting
+![Lie derivatives](lie-derivative.svg)
+
+## Defining and solving an ODE
+
+Let's solve the Lorenz equations
+
+$$
+\begin{aligned}
+\frac{dx}{dt} &= σ(y-x) \\
+\frac{dy}{dt} &= x(ρ-z) - y \\
+\frac{dz}{dt} &= xy - βz \\
+\end{aligned}
+$$
+
+<!-- Local Variables: -->
+<!-- mode: markdown -->
+<!-- End: -->
