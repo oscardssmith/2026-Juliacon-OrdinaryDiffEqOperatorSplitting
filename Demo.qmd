@@ -2,7 +2,111 @@
 
 ## Reaction Diffusion Systems
 
+![](reaction-diffusion-split.svg){width="88%" fig-align="center"}
+
+. . .
+
+* Monolithic: a *nonlinear*, globally coupled system every step
+* Split: one constant SPD matrix (factorize once) + $N_\text{nodes}$ independent small ODEs
+
 ## Turing Patterns
+
+Gray-Scott on a sphere — two reactants, two diffusivities
+
+$$
+\begin{aligned}
+\partial_t r_1 &= D_1 \Delta r_1 \;\underbrace{-\, r_1 r_2^2 + F(1 - r_1)}_{R_1(r_1, r_2)} \\
+\partial_t r_2 &= D_2 \Delta r_2 \;\underbrace{+\, r_1 r_2^2 - (F + k)\, r_2}_{R_2(r_1, r_2)}
+\end{aligned}
+$$
+
+::: {.columns}
+::: {.column width="55%"}
+* $P_1$ triangles on an embedded surface (Ferrite.jl)
+* $\Delta$ becomes the Laplace-Beltrami operator — nothing changes for the splitting
+* $D_1 = 1.6\cdot10^{-4},\; D_2 = 8\cdot10^{-5},\; F = 0.06,\; k = 0.062$ → spots
+:::
+::: {.column width="45%"}
+<!-- TODO asset: gif/mp4 rendered from demos/turing-patterns/reactive-surface-os.vtkhdf -->
+![](gray-scott-dark.webp)
+:::
+:::
+
+::: {.footer}
+after the [Ferrite.jl reactive surface tutorial](https://ferrite-fem.github.io/Ferrite.jl/stable/tutorials/reactive_surface/)
+:::
+
+## You have written this splitting before
+
+Semi-discrete form — reaction evaluated node-wise, so it never sees $\mathbf{M}$:
+
+$$
+\mathbf{M}\dot{\mathbf{r}} = -\mathbf{K}\mathbf{r}
+\qquad\text{and}\qquad
+\dot{\mathbf{r}} = \mathbf{R}(\mathbf{r})
+$$
+
+```julia
+W = M + Δt * K
+cholW = cholesky(W)                      # constant → factorize once
+for t in Δt:Δt:T
+    uₜ .= cholW \ (M * uₜ₋₁)             # implicit Euler on diffusion
+    for i in 1:num_nodes                 # explicit Euler on reaction
+        du = reaction_kernel(rvₜ[:, i], material, t)
+        rvₜ[:, i] .+= Δt .* du
+    end
+    uₜ₋₁ .= uₜ
+end
+```
+
+. . .
+
+That loop **is** Lie-Trotter-Godunov with using backward and forward Euler hardcoded.
+
+## The same scheme, declared
+
+```julia
+diffusion = ODEFunction(MatrixOperator(diffusion_matrix);
+                        mass_matrix, jac_prototype = diffusion_matrix)
+reaction  = ODEFunction(GrayScottReactionFunction())        # node-local kernel
+
+f    = GenericSplitFunction((diffusion, reaction), (1:ndofs(dh), 1:ndofs(dh)))
+prob = OperatorSplittingProblem(f, u₀, (0.0, T))
+
+solve(prob, LieTrotterGodunov((ImplicitEuler(linsolve = UMFPACKFactorization()),
+                               Euler())), dt = Δt)
+```
+
+* Same operations, same cost — the mass matrix and the reused factorization stay inside `ImplicitEuler`
+* The **scheme** is now a value, not control flow
+
+## Now change the scheme
+
+```julia
+# second order scheme with 3 stages
+StrangMarchuk((SDIRK2(linsolve = UMFPACKFactorization()), Heun()))
+
+# adaptive second order with 4 stages
+PalindromicPairLieTrotterGodunov((Cash4(linsolve = UMFPACKFactorization()), Tsit5()))
+```
+
+. . .
+
+Each subproblem keeps its own controls:
+
+```julia
+init(prob, alg; dt = Δt,
+     adaptive = TreeOption(f, true),   # per subproblem
+     abstol   = TreeOption(f, 1e-3),
+     reltol   = TreeOption(f, 1e-2))
+```
+
+<!-- TODO: work-precision or Δt-vs-error numbers for LTG / SM / PPLTG on this problem -->
+
+::: {.callout-note}
+The splitting order only pays off if the inner solvers resolve their subproblems —
+`Euler()` at the splitting step size drags the whole method back to first order.
+:::
 
 ## Cardiac Electrophysiology
 
