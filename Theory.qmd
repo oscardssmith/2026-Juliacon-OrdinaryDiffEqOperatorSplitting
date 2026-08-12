@@ -16,11 +16,15 @@ $$
 ## Truncation errors
 
 * The fundamental difficulty of Operator Splitting is truncation error
-* Obvious methods have O(dt) error: Limited to Order 1
+* Obvious method: `u_{n+1} = u_n + dt*(f(u_n)+g(u_n))` have O(dt^2) error: Limited to Order 1
+![Lie derivatives](lie-derivative.svg)
+
 * To get high order solvers you need to build multistage meta-integrators.
 
-## How to solve splitting
-![Lie derivatives](lie-derivative.svg)
+## Truncation continued
+* Strang splitting: do half-step f, full step g, half step f
+* Higher order schemes require either reversing time or imaginary time.
+
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->

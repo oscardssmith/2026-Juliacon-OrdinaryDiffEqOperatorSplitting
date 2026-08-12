@@ -1,6 +1,19 @@
 # OrdinaryDiffEqOperatorSplitting.jl
 
-Package details go here.
+## Features
+* Adaptive timestepping
+* Interpolation
+* Callbacks
+* Arbitrary splitting
+
+## SciML design
+* export `OperatorSplittingProblem`
+* Tree of integrators
+* Each integrator can operate on arbitrary subset of states
+* support standard `init`/`solve`
+
+## Solver flexibility
+* solvers define a `perform_step!` and everythin else comes free
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
