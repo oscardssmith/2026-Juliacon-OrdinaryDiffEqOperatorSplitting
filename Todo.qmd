@@ -1,0 +1,11 @@
+## Future improvements
+* Better adaptivity
+* Complex stepping methods
+* Adaptive space splitting
+* Cleaner OrdinaryDiffEq integration
+
+# Questions?
+
+<!-- Local Variables: -->
+<!-- mode: markdown -->
+<!-- End: -->

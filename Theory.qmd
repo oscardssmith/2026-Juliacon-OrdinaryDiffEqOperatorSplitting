@@ -11,19 +11,42 @@ $$
 \frac{du}{dt} = f(u, t) + g(u, t) \\
 $$
 
-![`f+g` can be much more complicated than `f` and `g` individually](additive-split-of-fields.svg)
+* The combined field we actually have to integrate is complicated
+
+![](additive-split-of-fields-lhs.svg)
+
+## Motivation (continued)
+
+* But it splits into two pieces that are each simple
+
+![](additive-split-of-fields-rhs.svg)
+
+## LieTrotterGodunov
+
+* The obvious method
+* Evaluate `u_{n+1} = u{n} + dt*(f(u, t) + g(u, t))`
+* Basically `ExplicitEuler`
 
 ## Truncation errors
 
 * The fundamental difficulty of Operator Splitting is truncation error
-* Obvious method: `u_{n+1} = u_n + dt*(f(u_n)+g(u_n))` have O(dt^2) error: Limited to Order 1
+* LieTrotterGodunov limited to order 1
 ![Lie derivatives](lie-derivative.svg)
+
 
 * To get high order solvers you need to build multistage meta-integrators.
 
-## Truncation continued
-* Strang splitting: do half-step f, full step g, half step f
-* Higher order schemes require either reversing time or imaginary time.
+## Strang Splitting
+* half-step f, full step g, half step f
+* This gets us to order 2
+* This is as far as most packages go
+
+## Higher order schemes
+* Require either reversing time or imaginary time.
+* Very tricky, can create instability or rotate eigenvalues
+* A-stable integrators very helpful here
+
+<-- TODO: picture explaining complex stepping. -->
 
 
 <!-- Local Variables: -->

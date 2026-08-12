@@ -13,7 +13,7 @@
 * support standard `init`/`solve`
 
 ## Solver flexibility
-* solvers define a `perform_step!` and everythin else comes free
+* solvers define a `perform_step!` and everything else comes free
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
