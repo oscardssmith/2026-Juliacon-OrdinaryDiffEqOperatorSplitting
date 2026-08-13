@@ -132,7 +132,7 @@ Credits to my student Abdulaziz for setting up the simulation
 
 ## Cardiac Electromechanics
 
-TODO explain that this is now just one more recursive split
+![](electromechanics-split.svg){width="96%" fig-align="center"}
 
 ## Seismocardiography Simulations
 
