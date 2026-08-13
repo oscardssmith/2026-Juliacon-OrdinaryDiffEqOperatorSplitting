@@ -24,7 +24,9 @@ $$
 ## LieTrotterGodunov
 
 * The obvious method
-* Evaluate `u_{n+1} = u{n} + dt*(f(u, t) + g(u, t))`
+$$
+u_{n+1} = u_{n} + dt \cdot (f(u, t) + g(u, t))
+$$
 * Basically `ExplicitEuler`
 
 ## Truncation errors
@@ -41,12 +43,14 @@ $$
 * This gets us to order 2
 * This is as far as most packages go
 
+![](strang-splitting.svg)
+
 ## Higher order schemes
 * Require either reversing time or imaginary time.
 * Very tricky, can create instability or rotate eigenvalues
 * A-stable integrators very helpful here
 
-<-- TODO: picture explaining complex stepping. -->
+![](complex-time-step.svg)
 
 
 <!-- Local Variables: -->

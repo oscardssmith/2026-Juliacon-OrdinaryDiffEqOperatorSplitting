@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="260mm" height="130mm" viewBox="0 0 260 130" version="1.1">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#eee8d5"/>
+    </marker>
+    <style>
+      .box   { stroke-width: 0.6; rx: 2; fill: #073642; }
+      .root  { stroke: #b58900; }
+      .inner { stroke: #2aa198; }
+      .leaf  { stroke: #d33682; }
+      text   { font-family: Lato, sans-serif; fill: #eee8d5; text-anchor: middle; }
+      .ttl   { font-size: 4.2px; font-weight: 700; }
+      .sub   { font-size: 3.4px; font-family: JuliaMono, monospace; fill: #93a1a1; }
+      .edge  { stroke: #eee8d5; stroke-width: 0.8; fill: none; stroke-linejoin: round; }
+      .idx   { font-size: 3.2px; font-family: JuliaMono, monospace; fill: #b58900; }
+      .key   { font-size: 3.4px; text-anchor: start; fill: #93a1a1; }
+      .kt    { font-size: 3.6px; text-anchor: start; font-weight: 700; }
+    </style>
+  </defs>
+
+  <!-- ── root ───────────────────────────────────────────── -->
+  <rect class="box root" x="82" y="6" width="96" height="17"/>
+  <text class="ttl" x="130" y="12.5">OperatorSplittingIntegrator</text>
+  <text class="sub" x="130" y="17.5">StrangMarchuk(reaction, diffusion)</text>
+  <text class="sub" x="130" y="21.8">u = (Ca, V, T)   ·   dt = 0.1, adaptive</text>
+
+  <!-- edges root → level 2 -->
+  <path class="edge" d="M 130 23 V 32 H 62 V 44" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 130 23 V 32 H 198 V 44" marker-end="url(#arrow)"/>
+
+  <!-- ── interior node ─────────────────────────────────── -->
+  <rect class="box inner" x="18" y="44" width="88" height="17"/>
+  <text class="ttl" x="62" y="50.5">SplitSubIntegrator</text>
+  <text class="sub" x="62" y="55.5">LieTrotterGodunov(buffer, cell)</text>
+  <text class="sub" x="62" y="59.8">u = (Ca, V)   ·   dt = 0.05</text>
+
+  <!-- ── leaf: right branch of root ────────────────────── -->
+  <rect class="box leaf" x="156" y="44" width="84" height="17"/>
+  <text class="ttl" x="198" y="50.5">DEIntegrator  (leaf)</text>
+  <text class="sub" x="198" y="55.5">ODEProblem + ImplicitEuler()</text>
+  <text class="sub" x="198" y="59.8">u = (V, T)   ·   OrdinaryDiffEq.jl</text>
+
+  <!-- edges interior → leaves -->
+  <path class="edge" d="M 62 61 V 70 H 30 V 82" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 62 61 V 70 H 94 V 82" marker-end="url(#arrow)"/>
+
+  <rect class="box leaf" x="2" y="82" width="56" height="17"/>
+  <text class="ttl" x="30" y="88.5">DEIntegrator  (leaf)</text>
+  <text class="sub" x="30" y="93.5">Tsit5()</text>
+  <text class="sub" x="30" y="97.8">u = (Ca,)</text>
+
+  <rect class="box leaf" x="66" y="82" width="56" height="17"/>
+  <text class="ttl" x="94" y="88.5">DEIntegrator  (leaf)</text>
+  <text class="sub" x="94" y="93.5">Rosenbrock23()</text>
+  <text class="sub" x="94" y="97.8">u = (V,)</text>
+
+  <!-- ── legend ────────────────────────────────────────── -->
+  <rect class="box root"  x="150" y="82" width="6" height="4.5"/>
+  <text class="kt"  x="159" y="85.8">root</text>
+  <text class="key" x="176" y="85.8">owns u, tspan, saving, callbacks</text>
+  <rect class="box inner" x="150" y="89.5" width="6" height="4.5"/>
+  <text class="kt"  x="159" y="93.3">interior</text>
+  <text class="key" x="176" y="93.3">a nested GenericSplitFunction</text>
+  <rect class="box leaf"  x="150" y="97" width="6" height="4.5"/>
+  <text class="kt"  x="159" y="100.8">leaf</text>
+  <text class="key" x="176" y="100.8">any OrdinaryDiffEq algorithm</text>
+
+  <text class="sub" x="130" y="121">function tree · algorithm tree · option tree — one shape, three payloads</text>
+</svg>

@@ -775,7 +775,7 @@
        id="path1-2-3"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#eeeeee;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
        d="m 52.869622,112.20513 c 0,0 19.4915,3.34515 72.714208,-6.91293 47.01122,-9.060888 77.54621,-32.477318 104.2061,-67.59327"
        id="path1"
        sodipodi:nodetypes="csc" />
@@ -800,13 +800,13 @@
        id="path3-9-0"
        sodipodi:nodetypes="cc" />
     <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none"
+       style="fill:#eeeeee;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none"
        id="path2-6"
        cx="158.97755"
        cy="95.496689"
        r="3.7605062" />
     <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none"
+       style="fill:#eeeeee;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none"
        id="path2"
        cx="53.103043"
        cy="112.27197"
@@ -821,7 +821,7 @@
        transform="translate(8.2737026,109.82537)"
        id="g5">
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g3"
          transform="matrix(0.352778,0,0,0.352778,-0.984206,-0.637072)">
@@ -834,7 +834,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g4"
          transform="matrix(0.352778,0,0,0.352778,-0.984206,-0.637072)">
@@ -852,7 +852,7 @@
        transform="translate(187.90607,114.94385)"
        id="g6">
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g7"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -865,7 +865,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g8"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -878,7 +878,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g9"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -891,7 +891,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g10"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -904,7 +904,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g11"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -917,7 +917,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g12"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -935,7 +935,7 @@
        transform="rotate(-6.7996224,279.48167,-282.91685)"
        id="g14">
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g6-1"
          transform="matrix(0.352778,0,0,0.352778,-0.758208,-0.704673)">
@@ -948,7 +948,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g7-1"
          transform="matrix(0.352778,0,0,0.352778,-0.758208,-0.704673)">
@@ -961,7 +961,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g8-1"
          transform="matrix(0.352778,0,0,0.352778,-0.758208,-0.704673)">
@@ -974,7 +974,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g9-1"
          transform="matrix(0.352778,0,0,0.352778,-0.758208,-0.704673)">
@@ -987,7 +987,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g10-1"
          transform="matrix(0.352778,0,0,0.352778,-0.758208,-0.704673)">
@@ -1005,7 +1005,7 @@
        transform="translate(182.87281,50.314348)"
        id="g16">
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g8-1-1"
          transform="matrix(0.352778,0,0,0.352778,-0.758208,-0.704673)">
@@ -1018,7 +1018,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g9-1-1"
          transform="matrix(0.17374039,-0.30702866,0.30702866,0.17374039,-20.627732,16.821497)">
@@ -1038,7 +1038,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g10-1-1"
          transform="matrix(0.17374039,-0.30702866,0.30702866,0.17374039,-20.627732,16.821497)">
@@ -1051,7 +1051,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g11-1"
          transform="matrix(0.17374039,-0.30702866,0.30702866,0.17374039,-20.627732,16.821497)">
@@ -1064,7 +1064,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g12-1"
          transform="matrix(0.17374039,-0.30702866,0.30702866,0.17374039,-20.627732,16.821497)">
@@ -1077,7 +1077,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g13-1"
          transform="matrix(0.17374039,-0.30702866,0.30702866,0.17374039,-20.627732,16.821497)">
@@ -1090,7 +1090,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g15"
          transform="matrix(0.17374039,-0.30702866,0.30702866,0.17374039,-20.627732,16.821497)">
@@ -1115,7 +1115,7 @@
        transform="rotate(-14.4274,554.55689,-409.21154)"
        id="g17">
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g2"
          transform="matrix(0.352778,0,0,0.352778,-0.896011,-0.61864)">
@@ -1133,7 +1133,7 @@
        transform="rotate(7.0162962,29.031312,1250.5485)"
        id="g20">
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g8-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.49132,-0.704673)">
@@ -1146,7 +1146,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g9-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.49132,-0.704673)">
@@ -1159,7 +1159,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g10-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.49132,-0.704673)">
@@ -1172,7 +1172,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g11-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.49132,-0.704673)">
@@ -1185,7 +1185,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g12-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.49132,-0.704673)">
@@ -1205,7 +1205,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g13-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.49132,-0.704673)">
@@ -1218,7 +1218,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g14-1"
          transform="matrix(0.352778,0,0,0.352778,-1.49132,-0.704673)">
@@ -1231,7 +1231,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g15-1"
          transform="matrix(0.352778,0,0,0.352778,-1.49132,-0.704673)">
@@ -1249,7 +1249,7 @@
        transform="rotate(-22.007144,95.932644,-264.73239)"
        id="g22">
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g8-1-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -1262,7 +1262,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g9-1-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -1275,7 +1275,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g10-1-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -1288,7 +1288,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g11-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -1301,7 +1301,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g12-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -1314,7 +1314,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g13-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -1327,7 +1327,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g14-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -1340,7 +1340,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g15-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.10547,-0.704673)">
@@ -1375,7 +1375,7 @@
        transform="rotate(4.2201812,-1516.8478,1000.8741)"
        id="g27">
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g6-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.24328,-0.704673)">
@@ -1388,7 +1388,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g7-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.24328,-0.704673)">
@@ -1401,7 +1401,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g8-1-1-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.24328,-0.704673)">
@@ -1414,7 +1414,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g9-1-1-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.24328,-0.704673)">
@@ -1427,7 +1427,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g10-1-1-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.24328,-0.704673)">
@@ -1445,7 +1445,7 @@
        transform="rotate(-21.27195,331.72612,-414.07819)"
        id="g28">
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g8-1-1-1-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.24328,-0.704673)">
@@ -1458,7 +1458,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g9-1-1-1-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.24328,-0.704673)">
@@ -1478,7 +1478,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g10-1-1-1-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.24328,-0.704673)">
@@ -1491,7 +1491,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g11-1-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.24328,-0.704673)">
@@ -1504,7 +1504,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g12-1-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.24328,-0.704673)">
@@ -1517,7 +1517,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g13-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.24328,-0.704673)">
@@ -1530,7 +1530,7 @@
         </g>
       </g>
       <g
-         fill="#000000"
+         fill="#eeeeee"
          fill-opacity="1"
          id="g15-1-1-1-1"
          transform="matrix(0.352778,0,0,0.352778,-1.24328,-0.704673)">
