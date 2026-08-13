@@ -6,14 +6,14 @@
 
 . . .
 
-* Monolithic: a *nonlinear*, globally coupled system every step
-* Split: one constant SPD matrix (factorize once) + $N_\text{nodes}$ independent small ODEs
-* Equations of this type are widels used (morphogenesis, chemistry, electrophysiology, ...)
+Equation family is widely used (morphogenesis, chemistry, electrophysiology, ...)
 
 ## Turing Patterns
 
-Gray-Scott on a sphere — two reactants, two diffusivities
+Gray-Scott on a sphere
 
+::: {.columns}
+::: {.column width="40%"}
 $$
 \begin{aligned}
 \partial_t r_1 &= D_1 \Delta r_1 \;\underbrace{-\, r_1 r_2^2 + F(1 - r_1)}_{R_1(r_1, r_2)} \\
@@ -21,13 +21,10 @@ $$
 \end{aligned}
 $$
 
-::: {.columns}
-::: {.column width="55%"}
-* $P_1$ triangles on an embedded surface ( Ferrite.jl )
-* $\Delta$ becomes the Laplace-Beltrami operator — nothing changes for the splitting
-* $D_1 = 1.6\cdot10^{-4},\; D_2 = 8\cdot10^{-5},\; F = 0.06,\; k = 0.062$ → stripes
+* Linear lagrange triangles on an embedded surface ( Ferrite.jl )
+* System of equations -- nothing changes for the splitting
 :::
-::: {.column width="45%"}
+::: {.column width="60%"}
 <!-- TODO asset: gif/webp rendered from demos/turing-patterns/reactive-surface.vtkhdf -->
 ![](videos/gray-scott-dark.webp)
 :::
@@ -97,34 +94,38 @@ Performance is not there yet for the adaptive scheme. :(
 ## Cardiac Electrophysiology
 
 ::: {.columns}
-::: {.column width="55%"}
-TODO monodomain problem with same splti as reaction diffusion and image of cell model
-
+::: {.column width="65%"}
+![](monodomain-cable.svg){width="100%" fig-align="center"}
 :::
-::: {.column width="45%"}
-<!-- TODO asset: gif/webp rendered from demos/turing-patterns/reactive-surface.vtkhdf -->
-![](videos/spiral-wave.webp)
+::: {.column width="35%"}
+![](videos/spiral-wave-dark.webp){width="90%" fig-align="center"}
+
+* Structurally the *same* split — only the reaction kernel changes
+* The reaction is extremely expensive (plethora of states per node)
 :::
 :::
 
 ## ECG Simulations
 
-Computer models help us to understand the releation between electrical signals in the heart and measured signals on the body surface
+<!-- Relate electrical signals in the heart and measured signals on the body in silico -->
 
-![](videos/moss-rabbit-ecg-demonstration.webp)
+![](videos/moss-rabbit-ecg-demonstration-dark.webp){width="100%" fig-align="center"}
 
+::: {.footer}
 Credits to my student Abdulaziz for setting up the simulation
+:::
 
-## Cardiac Mechanics coupled with Blood Flow
+## Cardiac Mechanics with Blood Flow
 
 ::: {.columns}
-::: {.column width="55%"}
-TODO image of heart with sarcomere (contraction)
-
+::: {.column width="62%"}
+![](mechanics-circulation-split.svg){width="100%" fig-align="center"}
 :::
-::: {.column width="45%"}
-<!-- TODO asset: gif/webp rendered from demos/turing-patterns/reactive-surface.vtkhdf -->
-![](videos/contraction.webp)
+::: {.column width="38%"}
+![](videos/contraction-dark.webp){width="76%" fig-align="center"}
+
+* The 3D chamber and the 0D circuit exchange only pressure and volume
+* Each sub-problem keeps its own solver
 :::
 :::
 
@@ -135,9 +136,12 @@ TODO explain that this is now just one more recursive split
 
 ## Seismocardiography Simulations
 
-![](videos/SCG_animation_abdulaziz.webp)
+![](videos/SCG_animation_abdulaziz-dark.webp)
 
-Credits to my student Abdulaziz for setting up the simulation
+::: {.footer}
+Credits to my student Abdulaziz for setting up the simulation and the DFG funding
+:::
+
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
