@@ -15,10 +15,10 @@
 * Each integrator can operate on arbitrary subset of states
 * support standard `init`/`solve`
 
-## Solver flexibility`
+## Solver flexibility
 * Tree of integrators
 * solvers define a `perform_step!` and everything else comes free
-[](integrator-tree.svg)
+![](integrator-tree.svg)
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
