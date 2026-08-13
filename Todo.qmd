@@ -3,6 +3,7 @@
 * Complex stepping methods
 * Adaptive space splitting
 * Cleaner OrdinaryDiffEq integration
+* GPU subintegrator support
 
 # Questions?
 
